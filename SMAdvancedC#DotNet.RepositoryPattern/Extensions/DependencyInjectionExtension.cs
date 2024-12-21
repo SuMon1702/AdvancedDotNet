@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SMAdvancedC_DotNet.Database.Models;
+using SMAdvancedC_DotNet.RepositoryPattern.Handlers;
 using SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories;
 
 namespace SMAdvancedC_DotNet.RepositoryPattern.Extensions
@@ -21,7 +22,12 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Extensions
                     {
                         opt.JsonSerializerOptions.PropertyNamingPolicy = null;
                     });
+
+            builder.Services.AddExceptionHandler<GlobalExceptionalHandler>();
+            builder.Services.AddProblemDetails();
+
             return services;
+
                     
             
         }
