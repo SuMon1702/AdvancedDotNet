@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SMAdvancedC#DotNet.Database\SMAdvancedC#DotNet.Database.csproj" />
+  </ItemGroup>
+
 </Project>
