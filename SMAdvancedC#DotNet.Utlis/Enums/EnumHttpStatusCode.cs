@@ -8,7 +8,7 @@ namespace SMAdvancedC_DotNet.Utlis.Enums
 {
     public enum EnumHttpStatusCode
     {
-        success=200,
+        Success=200,
         BadRequest= 400,
         Conflict=409,
         NotFound=404,
