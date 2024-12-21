@@ -1,0 +1,6 @@
+@SMAdvancedC_DotNet.RepositoryPattern_HostAddress = http://localhost:5294
+
+GET {{SMAdvancedC_DotNet.RepositoryPattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
