@@ -3,6 +3,8 @@ using SMAdvancedC_DotNet.Database.Models;
 using SMAdvancedC_DotNet.RepositoryPattern.Models;
 using SMAdvancedC_DotNet.shared;
 using SMAdvancedC_DotNet.Utlis;
+using SMAdvancedC_DotNet.RepositoryPattern.Persistance;
+
 
 namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 {
@@ -76,7 +78,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
             return result;
         }
 
-        public async Task<Result<BlogRequest>> UpdateBlogAsync(int blogId, BlogRequest blog, CancellationToken cs)
+        public async Task<Result<BlogRequest>> UpdateBlogAsync(int blogId, BlogRequest requestModel, CancellationToken cs)
         {
             Result<BlogRequest> result;
 
@@ -88,14 +90,14 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
                     result = Result<BlogRequest>.Fail("No Data Found");
                     return result;
                 }
-                item.BlogTitle = blog.BlogTitle;
-                item.BlogAuthor = blog.BlogAuthor;
-                item.BlogContent = blog.BlogContent;
+                item.BlogTitle = requestModel.BlogTitle;
+                item.BlogAuthor = requestModel.BlogAuthor;
+                item.BlogContent = requestModel.BlogContent;
 
                 _context.TblBlogs.Update(item);
                 await _context.SaveChangesAsync(cs);
 
-                result = Result<BlogRequest>.Success(blog);
+                result = Result<BlogRequest>.Success(requestModel);
            
 
             return result;
@@ -125,5 +127,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
            
             return result;
         }
+
+        
     }
 }
