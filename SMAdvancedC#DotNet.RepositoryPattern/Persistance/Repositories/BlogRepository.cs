@@ -47,7 +47,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
                 BlogTitle = x.BlogTitle,
                 BlogAuthor = x.BlogAuthor,
                 BlogContent = x.BlogContent,
-                IsDeleted = true
+                IsDeleted = false
 
             }).ToListAsync(cs);
 
@@ -66,7 +66,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
                     BlogTitle = requestModel.BlogTitle,
                     BlogAuthor = requestModel.BlogAuthor,
                     BlogContent = requestModel.BlogContent,
-                    IsDeleted = true,
+                    IsDeleted = false,
                 };
 
                 await _context.TblBlogs.AddAsync(item, cs);
@@ -116,9 +116,9 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
                     return result;
                 }
 
-                item.IsDeleted = false;
+                item.IsDeleted = true;
 
-                // _context.TblBlogs.Update(item);
+                 _context.TblBlogs.Update(item);
                 await _context.SaveChangesAsync(cs);
 
                 result = Result<BlogModel>.Success();

@@ -44,9 +44,9 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         }
 
         [HttpDelete("{BlogId}")]
-        public async Task<IActionResult> DeleteBlogAsync(int blogId, CancellationToken cs)
+        public async Task<IActionResult> DeleteBlogAsync(int BlogId, CancellationToken cs)
         {
-            var result = await _blogRepository.DeleteBlogAsync(blogId, cs);
+            var result = await _blogRepository.DeleteBlogAsync(BlogId, cs);
             return Ok(result);
         }
     }
