@@ -8,8 +8,8 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
         Task<Result<List<BlogModel>>> GetBlogListAsync (int pageNo, int pageSize, CancellationToken cs);
         Task<Result<List<BlogModel>>> GetBlogListAsyncV1(int pageNo, int pageSize, CancellationToken cs);
         Task<Result<BlogRequest>> CreateBlogAsync(BlogRequest requestModel, CancellationToken cs);
-        Task<Result<BlogRequest>> UpdateBlogAsync(BlogRequest requestModel, CancellationToken cs);
-        Task<Result<BlogRequest>> DeleteBlogAsync(int blogId, CancellationToken cs);
+        Task<Result<BlogRequest>> UpdateBlogAsync(int id,BlogRequest requestModel, CancellationToken cs);
+        Task<Result<BlogModel>> DeleteBlogAsync(int blogId, CancellationToken cs);
 
 
     }
