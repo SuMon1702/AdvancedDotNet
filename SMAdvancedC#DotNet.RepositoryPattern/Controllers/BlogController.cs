@@ -37,9 +37,9 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         }
 
         [HttpPut("{BlogId}")]
-        public async Task<IActionResult> UpdateBlogAsync(BlogRequest requestModel, CancellationToken cs)
+        public async Task<IActionResult> UpdateBlogAsync (int BlogId,BlogRequest requestModel, CancellationToken cs)
         {
-            var result = await _blogRepository.UpdateBlogAsync(requestModel, cs);
+            var result = await _blogRepository.UpdateBlogAsync( BlogId,requestModel, cs);
             return Ok(result);
         }
 
