@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SMAdvancedC#DotNet.Database\SMAdvancedC#DotNet.Database.csproj" />
     <ProjectReference Include="..\SMAdvancedC#DotNet.GenericRepository\SMAdvancedC#DotNet.GenericRepository.csproj" />
     <ProjectReference Include="..\SMAdvancedC#DotNet.RepositoryPattern\SMAdvancedC#DotNet.RepositoryPattern.csproj" />
