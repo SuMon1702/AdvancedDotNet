@@ -6,8 +6,10 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        internal readonly AppDbContext _context;
+        private readonly AppDbContext _context;
         internal DbSet<T> _dbSet;
+       
+
         public void Add(T entity)
         {
             _dbSet.Add(entity);
