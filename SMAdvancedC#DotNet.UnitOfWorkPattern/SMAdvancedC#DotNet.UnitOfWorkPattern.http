@@ -1,0 +1,6 @@
+@SMAdvancedC_DotNet.UnitOfWorkPattern_HostAddress = http://localhost:5008
+
+GET {{SMAdvancedC_DotNet.UnitOfWorkPattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

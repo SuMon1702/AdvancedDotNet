@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SMAdvancedC_DotNet.UnitOfWorkPattern</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SMAdvancedC#DotNet.Database\SMAdvancedC#DotNet.Database.csproj" />
+    <ProjectReference Include="..\SMAdvancedC#DotNet.GenericRepository\SMAdvancedC#DotNet.GenericRepository.csproj" />
+    <ProjectReference Include="..\SMAdvancedC#DotNet.RepositoryPattern\SMAdvancedC#DotNet.RepositoryPattern.csproj" />
+    <ProjectReference Include="..\SMAdvancedC#DotNet.shared\SMAdvancedC#DotNet.shared.csproj" />
+    <ProjectReference Include="..\SMAdvancedC#DotNet.Utlis\SMAdvancedC#DotNet.Utlis.csproj" />
+  </ItemGroup>
+
+</Project>
