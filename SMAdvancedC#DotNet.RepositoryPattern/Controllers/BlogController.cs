@@ -16,7 +16,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
             _blogRepository = blogRepository;
         }
 
-        [HttpGet]
+        [HttpGet("List")]
         public async Task<IActionResult> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cs)
         {
             var lst = await _blogRepository.GetBlogListAsync(pageNo, pageSize, cs);
