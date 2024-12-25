@@ -10,7 +10,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 {
     public class BlogRepository : IBlogRepository
     {
-        private readonly AppDbContext _context;
+        internal readonly AppDbContext _context;
         public BlogRepository(AppDbContext context)
         {
             _context = context;
