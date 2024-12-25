@@ -6,7 +6,7 @@ using SMAdvancedC_DotNet.shared;
 
 namespace SMAdvancedC_DotNet.GenericRepository.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/GenericRepository/Blog")]
     [ApiController]
     public class BlogController : ControllerBase
     {

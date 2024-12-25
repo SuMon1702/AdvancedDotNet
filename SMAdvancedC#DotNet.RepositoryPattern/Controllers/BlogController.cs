@@ -5,7 +5,7 @@ using SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories;
 
 namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/RepositoryPattern/Blog")]
     [ApiController]
     public class BlogController : ControllerBase
     {

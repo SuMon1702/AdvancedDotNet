@@ -13,7 +13,6 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
             _context = context;
             _dbSet = _context.Set<T>();
         }
-
         public void Add(T entity)
         {
             _dbSet.Add(entity);
@@ -31,7 +30,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 
         public async Task AddRangeAsync(IEnumerable<T> entities, CancellationToken cs)
         {
-           await _dbSet.AddRangeAsync(entities, cs);
+            await _dbSet.AddRangeAsync(entities, cs);
         }
 
         public void Delete(T entity)
@@ -71,7 +70,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 
         public void UpdateRange(IEnumerable<T> entities)
         {
-            _dbSet.UpdateRange(entities); 
+            _dbSet.UpdateRange(entities);
         }
     }
 }

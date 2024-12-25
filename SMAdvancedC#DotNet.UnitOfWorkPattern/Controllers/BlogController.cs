@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance;
+using SMAdvancedC_DotNet.shared;
+using Microsoft.EntityFrameworkCore;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
 {
@@ -8,18 +10,24 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
+        internal readonly IUnitOfWork _unitOfWork;
 
         public BlogController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
+        #region GetBlogsAsync
+
         [HttpGet]
-        public async Task<IActionResult> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cs)
+        public async Task<IActionResult> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cs)
         {
-            var lst = await _unitOfWork.BlogRepository.GetBlogListAsync(pageNo, pageSize, cs);
+            var query = _unitOfWork.BlogRepository.Query();
+            var lst = await query.ToListAsync(cs);
+
             return Ok(lst);
         }
+
+        #endregion
     }
 }
