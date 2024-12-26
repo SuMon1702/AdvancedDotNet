@@ -1,5 +1,6 @@
-using SMAdvancedC_DotNet.RepositoryPattern.Extensions;
-using SMDotNet.GenericRepositoryPattern.Dependencies;
+
+
+using SMAdvancedC_DotNet.UnitOfWorkPattern.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 
