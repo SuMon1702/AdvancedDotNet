@@ -1,5 +1,6 @@
 ﻿using SMAdvancedC_DotNet.RepositoryPattern.Models;
 using SMAdvancedC_DotNet.Utlis;
+using System.Collections.Generic;
 
 namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 {
