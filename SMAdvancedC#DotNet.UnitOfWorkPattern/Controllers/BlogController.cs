@@ -22,7 +22,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
         [HttpGet]
         public async Task<IActionResult> GetBlogsAsync(int pageNo, int pageSize, CancellationToken cs)
         {
-            var query = _unitOfWork.BlogRepository.Query();
+            var query = _unitOfWork.BlogRepository.Query().Paginate(pageNo, pageSize);
             var lst = await query.ToListAsync(cs);
 
             return Ok(lst);
