@@ -1,5 +1,5 @@
 ﻿using SMAdvancedC_DotNet.Database.Models;
-using SMAdvancedC_DotNet.GenericRepository.Persistance.Repositories;
+using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 {
@@ -8,7 +8,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
         internal readonly AppDbContext _context;
         public IBlogRepository BlogRepository { get; set; }
 
-        RepositoryPattern.Persistance.Repositories.IBlogRepository IUnitOfWork.BlogRepository => throw new NotImplementedException();
+       
 
         public UnitOfWork(AppDbContext context)
         {
