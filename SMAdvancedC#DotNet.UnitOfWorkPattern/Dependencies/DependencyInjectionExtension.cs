@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SMAdvancedC_DotNet.Database.Models;
-using SMAdvancedC_DotNet.GenericRepository.Persistance.Repositories;
 using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Dependencies
