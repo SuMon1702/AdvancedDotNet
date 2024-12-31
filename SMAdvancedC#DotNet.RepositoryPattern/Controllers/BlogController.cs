@@ -28,6 +28,8 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
             var lst = await _blogRepository.GetBlogListAsyncV1(pageNo, pageSize, cs);
             return Ok(lst);
         }
+
+
         [HttpPost]
         public async Task<IActionResult> CreateBlogAsync(BlogRequest requestModel, CancellationToken cs)
         {
@@ -35,12 +37,14 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
             return Ok(result);
         }
 
+
         [HttpPut("{BlogId}")]
         public async Task<IActionResult> UpdateBlogAsync (int BlogId,BlogRequest requestModel, CancellationToken cs)
         {
             var result = await _blogRepository.UpdateBlogAsync( BlogId,requestModel, cs);
             return Ok(result);
         }
+
 
         [HttpDelete("{BlogId}")]
         public async Task<IActionResult> DeleteBlogAsync(int BlogId, CancellationToken cs)
