@@ -33,12 +33,16 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         #endregion
 
 
+        #region CreateBlogAsync
+
         [HttpPost]
         public async Task<IActionResult> CreateBlogAsync(BlogRequest requestModel, CancellationToken cs)
         {
             var result = await _blogRepository.CreateBlogAsync(requestModel, cs);
             return Ok(result);
         }
+        #endregion
+
 
 
         [HttpPut("{BlogId}")]
