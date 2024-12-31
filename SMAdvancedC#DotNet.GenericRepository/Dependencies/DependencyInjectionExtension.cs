@@ -1,5 +1,4 @@
-﻿
-using SMAdvancedC_DotNet.Database.Models;
+﻿using SMAdvancedC_DotNet.Database.Models;
 using Microsoft.EntityFrameworkCore;
 using SMAdvancedC_DotNet.GenericRepository.Persistance.Repositories;
 
