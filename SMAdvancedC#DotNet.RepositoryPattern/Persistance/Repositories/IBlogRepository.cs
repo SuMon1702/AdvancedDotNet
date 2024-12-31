@@ -11,6 +11,6 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
         Task<Result<BlogRequest>> CreateBlogAsync(BlogRequest requestModel, CancellationToken cs);
         Task<Result<BlogRequest>> UpdateBlogAsync(int blogId,BlogRequest requestModel, CancellationToken cs);
         Task<Result<BlogModel>> DeleteBlogAsync(int blogId, CancellationToken cs);
-        object Query();
+        
     }
 }
