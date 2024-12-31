@@ -1,5 +1,3 @@
-
-
 using SMAdvancedC_DotNet.UnitOfWorkPattern.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
