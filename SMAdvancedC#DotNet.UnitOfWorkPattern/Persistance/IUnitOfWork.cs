@@ -1,6 +1,4 @@
-﻿
-
-using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories;
+﻿using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 {
