@@ -6,6 +6,7 @@ namespace SMAdvancedC_DotNet.GenericRepository.Persistance.Repositories
     {
         public BlogRepository(AppDbContext context) : base(context)
         {
+
         }
     }
 }
