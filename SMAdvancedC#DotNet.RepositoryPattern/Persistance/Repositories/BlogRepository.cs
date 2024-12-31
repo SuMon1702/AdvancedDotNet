@@ -10,6 +10,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
     public class BlogRepository : IBlogRepository
     {
         internal readonly AppDbContext _context;
+
         public BlogRepository(AppDbContext context)
         {
             _context = context;
@@ -77,7 +78,6 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 
                 result = Result<BlogRequest>.Success(requestModel);
             
-            
             return result;
         }
 
@@ -102,7 +102,6 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 
                 result = Result<BlogRequest>.Success(requestModel);
            
-
             return result;
         }
 
@@ -126,11 +125,7 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
 
                 result = Result<BlogModel>.Success();
             
-
-           
             return result;
         }
-
-        
     }
 }
