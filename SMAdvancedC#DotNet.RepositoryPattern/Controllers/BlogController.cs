@@ -53,12 +53,13 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         }
         #endregion
 
-
+        #region DeleteBlogAsync
         [HttpDelete("{BlogId}")]
         public async Task<IActionResult> DeleteBlogAsync(int BlogId, CancellationToken cs)
         {
             var result = await _blogRepository.DeleteBlogAsync(BlogId, cs);
             return Ok(result);
         }
+        #endregion
     }
 }
