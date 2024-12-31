@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SMAdvancedC_DotNet.GenericRepository.Persistance.Repositories;
 using SMAdvancedC_DotNet.shared;
