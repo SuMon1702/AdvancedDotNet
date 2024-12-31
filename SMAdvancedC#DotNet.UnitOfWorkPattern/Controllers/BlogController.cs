@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance;
 using SMAdvancedC_DotNet.shared;
 using Microsoft.EntityFrameworkCore;
