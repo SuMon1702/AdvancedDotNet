@@ -1,6 +1,4 @@
 using SMAdvancedC_DotNet.RepositoryPattern.Extensions;
-using Microsoft.AspNetCore.Builder;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
