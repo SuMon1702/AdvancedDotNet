@@ -8,8 +8,6 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
         internal readonly AppDbContext _context;
         public IBlogRepository BlogRepository { get; set; }
 
-       
-
         public UnitOfWork(AppDbContext context)
         {
             _context = context;
