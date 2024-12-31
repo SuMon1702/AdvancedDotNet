@@ -3,7 +3,6 @@ using SMAdvancedC_DotNet.Database.Models;
 using SMAdvancedC_DotNet.RepositoryPattern.Models;
 using SMAdvancedC_DotNet.shared;
 using SMAdvancedC_DotNet.Utlis;
-using SMAdvancedC_DotNet.RepositoryPattern.Persistance;
 
 
 namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
