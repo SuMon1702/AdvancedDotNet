@@ -15,7 +15,6 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Handlers
                 JsonConvert.SerializeObject(result),
                 cancellationToken
             );
-
             return true;
         }
     }
