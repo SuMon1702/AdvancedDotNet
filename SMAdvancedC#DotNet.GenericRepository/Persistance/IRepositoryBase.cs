@@ -17,7 +17,5 @@ namespace SMAdvancedC_DotNet.GenericRepository.Persistance
         void Dispose();
         Task SaveChangesAsync(CancellationToken cs=default);
         void SaveChanges();
-
-
     }
 }
