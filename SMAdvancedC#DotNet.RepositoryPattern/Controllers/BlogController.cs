@@ -44,13 +44,14 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         #endregion
 
 
-
+        #region UpdateBlogAsync
         [HttpPut("{BlogId}")]
         public async Task<IActionResult> UpdateBlogAsync (int BlogId,BlogRequest requestModel, CancellationToken cs)
         {
             var result = await _blogRepository.UpdateBlogAsync( BlogId,requestModel, cs);
             return Ok(result);
         }
+        #endregion
 
 
         [HttpDelete("{BlogId}")]
