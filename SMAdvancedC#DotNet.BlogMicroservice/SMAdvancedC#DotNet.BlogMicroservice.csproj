@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SMAdvancedC#DotNet.Database\SMAdvancedC#DotNet.Database.csproj" />
+    <ProjectReference Include="..\SMAdvancedC#DotNet.GenericRepository\SMAdvancedC#DotNet.GenericRepository.csproj" />
     <ProjectReference Include="..\SMAdvancedC#DotNet.Utlis\SMAdvancedC#DotNet.Utlis.csproj" />
   </ItemGroup>
 
