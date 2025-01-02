@@ -1,0 +1,6 @@
+@SMAdvancedC_DotNet.BlogMicroservice_HostAddress = http://localhost:5287
+
+GET {{SMAdvancedC_DotNet.BlogMicroservice_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
