@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMAdvancedC#DotNet.shared",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMAdvancedC#DotNet.UnitOfWorkPattern", "SMAdvancedC#DotNet.UnitOfWorkPattern\SMAdvancedC#DotNet.UnitOfWorkPattern.csproj", "{A4C3DCE2-96FC-47FE-8DB3-D342081C0823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMAdvancedC#DotNet.BlogMicroservice", "SMAdvancedC#DotNet.BlogMicroservice\SMAdvancedC#DotNet.BlogMicroservice.csproj", "{7788DF68-AE7A-4403-A83C-9DDABC2970C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMAdvancedC#DotNet.BlogMicroservice", "SMAdvancedC#DotNet.BlogMicroservice\SMAdvancedC#DotNet.BlogMicroservice.csproj", "{7788DF68-AE7A-4403-A83C-9DDABC2970C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMAdvancedC#DotNet.GateWay", "SMAdvancedC#DotNet.GateWay\SMAdvancedC#DotNet.GateWay.csproj", "{236133AD-C170-42CA-8D2E-80938FA69177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMAdvancedC#DotNet.GateWay", "SMAdvancedC#DotNet.GateWay\SMAdvancedC#DotNet.GateWay.csproj", "{236133AD-C170-42CA-8D2E-80938FA69177}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
