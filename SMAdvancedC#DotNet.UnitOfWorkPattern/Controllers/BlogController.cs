@@ -2,6 +2,7 @@
 using SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance;
 using SMAdvancedC_DotNet.shared;
 using Microsoft.EntityFrameworkCore;
+using SMAdvancedC_DotNet.UnitOfWorkPattern.Model;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
 {
@@ -27,9 +28,12 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
 
             return Ok(lst);
         }
-
         #endregion
 
-        
+       
+
+
+
+
     }
 }
