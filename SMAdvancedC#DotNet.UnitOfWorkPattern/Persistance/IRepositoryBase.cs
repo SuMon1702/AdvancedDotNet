@@ -4,7 +4,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
 {
     public interface IRepositoryBase<T> where T : class
     {
-        IQueryable<T> Query(Expression<Func<T, bool>>? expression = null);
+        IQueryable<T> Query (Expression<Func<T, bool>>? expression = null);
 
         Task AddAsync(T entity, CancellationToken cs = default);
         void Add(T entity);
