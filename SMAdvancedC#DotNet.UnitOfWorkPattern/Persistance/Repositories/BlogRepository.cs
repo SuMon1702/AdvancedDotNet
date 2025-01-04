@@ -1,5 +1,5 @@
 ﻿using SMAdvancedC_DotNet.Database.Models;
-
+using SMAdvancedC_DotNet.UnitOfWorkPattern.Model;
 
 namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories
 {
@@ -7,5 +7,10 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories
     {
         public BlogRepository(AppDbContext context)
             : base(context) { }
+
+        public Task CreateBlogAsync(BlogRequest requestModel, CancellationToken cs)
+        {
+            return Task.CompletedTask;
+        }
     }
 }
