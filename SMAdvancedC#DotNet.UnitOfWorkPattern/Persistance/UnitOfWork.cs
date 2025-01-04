@@ -13,5 +13,10 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance
             _context = context;
             BlogRepository ??= new BlogRepository(context);
         }
+
+        public Task SaveChangesAsync(CancellationToken cs)
+        {
+            return _context.SaveChangesAsync(cs);
+        }
     }
 }
