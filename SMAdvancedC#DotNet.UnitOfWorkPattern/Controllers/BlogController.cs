@@ -30,7 +30,28 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Controllers
         }
         #endregion
 
-       
+        #region CreateBlogAsync
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBlogAsync([FromBody] BlogRequest requestModel, CancellationToken cs)
+        {
+            if (requestModel == null)
+            {
+                return BadRequest("Invalid blog data.");
+            }
+
+            await _unitOfWork.BlogRepository.CreateBlogAsync(requestModel, cs);
+
+            if (CreateBlogAsync == null)
+            {
+                return BadRequest("Error creating blog.");
+            }
+
+            await _unitOfWork.SaveChangesAsync(cs);
+
+            return Ok("Blog created successfully.");
+        }
+        #endregion
 
 
 
