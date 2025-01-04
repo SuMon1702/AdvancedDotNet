@@ -6,6 +6,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistance.Repositories
 {
     public interface IBlogRepository : IRepositoryBase<TblBlog>
     {
-        
+        Task CreateBlogAsync(BlogRequest requestModel, CancellationToken cs);
+
     }
 }
