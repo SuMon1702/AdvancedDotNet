@@ -7,7 +7,7 @@ namespace SMAdvancedC_DotNet.UnitOfWorkPattern.Persistence.Repositories;
 public interface IBlogRepository : IRepositoryBase<TblBlog>
 {
     Task<Result<List<BlogModel>>> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cs);
-   // Task<Result<BlogModel>> GetBlogByIdAsync(int blogId, CancellationToken cs);
+    Task<Result<BlogModel>> GetBlogByIdAsync(int blogId, CancellationToken cs);
 
 
 }
