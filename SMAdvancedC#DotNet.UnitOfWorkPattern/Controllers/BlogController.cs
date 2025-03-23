@@ -17,7 +17,7 @@ public class BlogController : ControllerBase
     }
 
 
-    #region GetBlogsAsync
+    #region GetBlogsListAsync
     [HttpGet]
     public async Task<IActionResult> GetBlogListAsync(int pageNo, int pageSize, CancellationToken cs)
     {
@@ -28,6 +28,8 @@ public class BlogController : ControllerBase
         return Ok(lst);
     }
     #endregion
+
+
 
     //#region CreateBlogAsync
 
