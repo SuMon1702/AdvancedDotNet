@@ -29,35 +29,51 @@ public class BlogController : ControllerBase
     }
     #endregion
 
+    #region GetBlogByIdAsync
+    [HttpGet("{blogId}")]
+    public async Task<IActionResult> GetBlogByIdAsync(int blogId, CancellationToken cs)
+    {
+        var blog = await _unitOfWork.BlogRepository.Query(x => x.BlogId == blogId).FirstOrDefaultAsync(cs);
 
+        if (blog == null)
+        {
+            return NotFound("Blog not found.");
+        }
 
-    //#region CreateBlogAsync
-
-    //[HttpPost]
-    //public async Task<IActionResult> CreateBlogAsync([FromBody] BlogRequest requestModel, CancellationToken cs)
-    //{
-    //    if (requestModel == null)
-    //    {
-    //        return BadRequest("Invalid blog data.");
-    //    }
-
-    //    await _unitOfWork.BlogRepository.CreateBlogAsync(requestModel, cs);
-
-    //    if (CreateBlogAsync == null)
-    //    {
-    //        return BadRequest("Error creating blog.");
-    //    }
-
-    //    await _unitOfWork.SaveChangesAsync(cs);
-
-    //    return Ok("Blog created successfully.");
-    //}
-    //#endregion
-
-    
-    
-
-
-
-
+        return Ok(blog);
+    }
+    #endregion
 }
+
+
+
+//#region CreateBlogAsync
+
+//[HttpPost]
+//public async Task<IActionResult> CreateBlogAsync([FromBody] BlogRequest requestModel, CancellationToken cs)
+//{
+//    if (requestModel == null)
+//    {
+//        return BadRequest("Invalid blog data.");
+//    }
+
+//    await _unitOfWork.BlogRepository.CreateBlogAsync(requestModel, cs);
+
+//    if (CreateBlogAsync == null)
+//    {
+//        return BadRequest("Error creating blog.");
+//    }
+
+//    await _unitOfWork.SaveChangesAsync(cs);
+
+//    return Ok("Blog created successfully.");
+//}
+//#endregion
+
+
+
+
+
+
+
+
