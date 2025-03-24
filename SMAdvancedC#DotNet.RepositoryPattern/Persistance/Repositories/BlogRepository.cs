@@ -60,6 +60,35 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Persistance.Repositories
             return result;
         }
 
+        public async Task<Result<BlogModel>> GetBlogByIdAsync(int blogId, CancellationToken cs)
+        {
+            Result<BlogModel> result;
+            try
+            {
+                var query = _context.TblBlogs.Where(x => x.BlogId == blogId);
+                var blog = await query.Select(x => new BlogModel()
+                {
+                    BlogId = x.BlogId,
+                    BlogTitle = x.BlogTitle,
+                    BlogAuthor = x.BlogAuthor,
+                    BlogContent = x.BlogContent,
+                }).FirstOrDefaultAsync(cs);
+                if (blog == null)
+                {
+                    result = Result<BlogModel>.Fail("Blog not found.");
+                }
+                else
+                {
+                    result = Result<BlogModel>.Success(blog);
+                }
+            }
+            catch (Exception ex)
+            {
+                result = Result<BlogModel>.Fail(ex);
+            }
+            return result;
+        }
+
 
         public async Task<Result<BlogRequest>> CreateBlogAsync(BlogRequest requestModel, CancellationToken cs)
         {
