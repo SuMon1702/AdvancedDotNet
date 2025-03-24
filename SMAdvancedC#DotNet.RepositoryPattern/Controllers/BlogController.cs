@@ -32,6 +32,18 @@ namespace SMAdvancedC_DotNet.RepositoryPattern.Controllers
         }
         #endregion
 
+        #region GetBlogByIdAsync
+        [HttpGet("{BlogId}")]
+        public async Task<IActionResult> GetBlogByIdAsync(int BlogId, CancellationToken cs)
+        {
+            var blog = await _blogRepository.GetBlogByIdAsync(BlogId, cs);
+            if (blog == null)
+            {
+                return NotFound("Blog not found.");
+            }
+            return Ok(blog);
+        }
+
 
         #region CreateBlogAsync
 
