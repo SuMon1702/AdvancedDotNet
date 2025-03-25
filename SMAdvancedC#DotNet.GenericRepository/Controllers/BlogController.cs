@@ -24,5 +24,18 @@ namespace SMAdvancedC_DotNet.GenericRepository.Controllers
 
             return Ok(lst);
         }
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetBlogByIdAsync(int blogId, CancellationToken cs)
+        {
+            var blog = await _blogRepository.Query(x => x.BlogId == blogId).FirstOrDefaultAsync(cs);
+
+            if (blog == null)
+            {
+                return NotFound("Blog not found.");
+            }
+
+            return Ok(blog);
+        }
     }
 }
